@@ -395,29 +395,49 @@ export default function Home() {
       )}
       {activeTab === 'analytics' && (
         <div className="h-full w-full flex">
-          <div className="h-full flex flex-col lg:flex-row overflow-hidden items-center justify-center bg-black w-full gap-4 mx-auto absolute ">
-            <AnimatePresence>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 2 }}
-                exit={{ opacity: 0 }}
-                className="h-full w-full absolute inset-0"
-              >
-                <CanvasRevealEffect
-                  animationSpeed={5}
-                  containerClassName="bg-transparent"
-                  colors={[
-                    [554, 20, 246],
-                    [139, 92, 246],
-                  ]}
-                  opacities={[0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 2]}
-                  dotSize={10}
-                />
-              </motion.div>
-            </AnimatePresence>
-            <div className="absolute inset-0 [mask-image:radial-gradient(black,transparent)] bg-black/80 dark:bg-black/90 duration-200" />
+        <div className="h-full flex flex-col lg:flex-row overflow-hidden items-center justify-center bg-black w-full gap-4 mx-auto absolute ">
+          <AnimatePresence>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 2 }}
+              exit={{ opacity: 0 }}
+              className="h-full w-full absolute inset-0"
+            >
+              <CanvasRevealEffect
+                animationSpeed={5}
+                containerClassName="bg-transparent"
+                colors={[
+                  [554, 20, 246],
+                  [139, 92, 246],
+                ]}
+                opacities={[0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 2]}
+                dotSize={10}
+              />
+            </motion.div>
+          </AnimatePresence>
+          <div className="absolute inset-0 [mask-image:radial-gradient(black,transparent)] bg-black/80 dark:bg-black/90 duration-200" />
+          
+          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
+        <p className="font-bold text-white text-lg">model name</p>
+        <p className="font-normal text-base text-neutral-200 mt-4">
+          metrics
+        </p>
+      </GlareCard>
+      <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
+        <p className="font-bold text-white text-lg">model name</p>
+        <p className="font-normal text-base text-neutral-200 mt-4">
+          metrics
+        </p>
+      </GlareCard>
+      <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
+        <p className="font-bold text-white text-lg">model name</p>
+        <p className="font-normal text-base text-neutral-200 mt-4">
+          metrics
+        </p>
+      </GlareCard>
+          
           </div>
-        </div>
+      </div>
       )}
       {activeTab === 'model' && (
         <div className="h-full w-full flex">
